@@ -1,1 +1,16 @@
-# Book Search Engine Starter Code
+# Book Search Engine
+
+## Description
+
+An application that uses a React front end, MongoDB database, Node.js and Express.js for the server, and Google Books API. Users are able to create a profile, use a search engine to search for books, view detailed information about those books, and keep track of the books they've searched and saved.
+
+## Technologies Used
+
+* HTML/CSS/JavaScript
+* MERN Stack
+
+-----
+
+GitHub: [ewalker518](https://github.com/ewalker518/)
+
+Email: [ewalkertbone@gmail.com](mailto:ewalkertbone@gmail.com)
