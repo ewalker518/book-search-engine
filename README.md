@@ -9,7 +9,9 @@ An application that uses a React front end, MongoDB database, Node.js and Expres
 ## Technologies Used
 
 * HTML/CSS/JavaScript
-* MERN Stack
+* Mongo DB
+* Apollo
+* GraphQL
 
 -----
 
