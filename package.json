@@ -1,7 +1,7 @@
 {
   "name": "book-search-engine",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -15,13 +15,13 @@
   "devDependencies": {
     "concurrently": "^5.1.0"
   },
-  "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
-    "apollo-boost": "^0.4.9",
-    "apollo-server-express": "^3.5.0",
-    "bcrypt": "^5.0.1",
-    "express": "^4.17.1",
-    "graphql": "^16.0.1",
-    "react-router-dom": "^6.0.2"
-  }
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewalker518/book-search-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ewalker518/book-search-engine/issues"
+  },
+  "homepage": "https://github.com/ewalker518/book-search-engine#readme"
 }
