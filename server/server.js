@@ -1,5 +1,4 @@
 const express = require("express");
-// import ApolloServer
 const { ApolloServer } = require("apollo-server-express");
 const { authMiddleware } = require("./utils/auth");
 
@@ -11,15 +10,15 @@ const db = require("./config/connection");
 const { typeDefs, resolvers } = require("./schemas");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware,
-});
+// const server = new ApolloServer({
+//   typeDefs,
+//   resolvers,
+//   context: authMiddleware,
+// });
 
-server.applyMiddleware({ app });
+// server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -34,12 +33,23 @@ app.get("*", (req, res) => {
 
 // app.use(routes);
 
-db.once("open", () => {
+// db.once("open", () => {
+//   app.listen(PORT, () => {
+//     console.log(`API server running on port ${PORT}!`);
+//     // log where we can go to test our GQL API
+//     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+//   });
+// });
+
+async function startApolloServer(typeDefs, resolvers){
+  const server = new ApolloServer({typeDefs, resolvers})
+  const app = express();
+  await server.start();
+  server.applyMiddleware({app, path: '/graphql'});
+  
   app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-  });
-});
-db.on("error", (err) => {
-  console.error("MongoDB connection error: ", err);
-});
+  console.log(`Server is listening on port ${PORT}`);
+})
+}
+
+startApolloServer(typeDefs, resolvers);
