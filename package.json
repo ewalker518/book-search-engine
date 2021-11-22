@@ -1,7 +1,7 @@
 {
-  "name": "book-search-engine",
+  "name": "googlebooks-app",
   "version": "1.0.0",
-  "description": "## Description",
+  "description": "",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -14,14 +14,5 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
-  },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ewalker518/book-search-engine.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ewalker518/book-search-engine/issues"
-  },
-  "homepage": "https://github.com/ewalker518/book-search-engine#readme"
+  }
 }
